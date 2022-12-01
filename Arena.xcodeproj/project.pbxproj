@@ -7,25 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E102FF42936069400B4F28E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E102FF32936069400B4F28E /* GoogleService-Info.plist */; };
+		6408FF612933CB6A001A7827 /* TicketClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408FF602933CB6A001A7827 /* TicketClass.swift */; };
+		6408FF632933CCC5001A7827 /* GameClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408FF622933CCC5001A7827 /* GameClass.swift */; };
 		642E71E0291DB34800322993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E71DF291DB34800322993 /* AppDelegate.swift */; };
 		642E71E2291DB34800322993 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E71E1291DB34800322993 /* SceneDelegate.swift */; };
-		642E71E4291DB34800322993 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E71E3291DB34800322993 /* ViewController.swift */; };
+		642E71E4291DB34800322993 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E71E3291DB34800322993 /* GamesViewController.swift */; };
 		642E71E7291DB34900322993 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642E71E5291DB34900322993 /* Main.storyboard */; };
 		642E71EA291DB34900322993 /* Arena.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 642E71E8291DB34900322993 /* Arena.xcdatamodeld */; };
 		642E71EC291DB34A00322993 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642E71EB291DB34A00322993 /* Assets.xcassets */; };
 		642E71EF291DB34A00322993 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642E71ED291DB34A00322993 /* LaunchScreen.storyboard */; };
+		642E71F7291DB65C00322993 /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642E71F6291DB65C00322993 /* TicketsViewController.swift */; };
+		643BCA8929332EC300B84834 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643BCA8829332EC300B84834 /* GameTableViewCell.swift */; };
+		643BCA8B29332ED400B84834 /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643BCA8A29332ED400B84834 /* TicketTableViewCell.swift */; };
+		643BCA8D29332EE900B84834 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643BCA8C29332EE900B84834 /* LibraryTableViewCell.swift */; };
+		643BCA9029333D2F00B84834 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 643BCA8F29333D2F00B84834 /* FirebaseAuth */; };
+		643BCA9229333D2F00B84834 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 643BCA9129333D2F00B84834 /* FirebaseFirestoreSwift */; };
+		647DFA1D291DCD3F00F1F5CB /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DFA1C291DCD3F00F1F5CB /* ItemViewController.swift */; };
+		647DFA21291DD85F00F1F5CB /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DFA20291DD85F00F1F5CB /* ListingViewController.swift */; };
+		647DFA23291DD8A400F1F5CB /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DFA22291DD8A400F1F5CB /* LibraryViewController.swift */; };
+		647DFA25291DD8BD00F1F5CB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DFA24291DD8BD00F1F5CB /* SettingsViewController.swift */; };
+		647DFA27291DD8CD00F1F5CB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DFA26291DD8CD00F1F5CB /* AuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E102FF32936069400B4F28E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6408FF602933CB6A001A7827 /* TicketClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketClass.swift; sourceTree = "<group>"; };
+		6408FF622933CCC5001A7827 /* GameClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameClass.swift; sourceTree = "<group>"; };
 		642E71DC291DB34800322993 /* Arena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		642E71DF291DB34800322993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		642E71E1291DB34800322993 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		642E71E3291DB34800322993 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		642E71E3291DB34800322993 /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		642E71E6291DB34900322993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		642E71E9291DB34900322993 /* Arena.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Arena.xcdatamodel; sourceTree = "<group>"; };
 		642E71EB291DB34A00322993 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		642E71EE291DB34A00322993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		642E71F0291DB34A00322993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		642E71F6291DB65C00322993 /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
+		643BCA8829332EC300B84834 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
+		643BCA8A29332ED400B84834 /* TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
+		643BCA8C29332EE900B84834 /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
+		647DFA1C291DCD3F00F1F5CB /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		647DFA20291DD85F00F1F5CB /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
+		647DFA22291DD8A400F1F5CB /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		647DFA24291DD8BD00F1F5CB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		647DFA26291DD8CD00F1F5CB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643BCA9029333D2F00B84834 /* FirebaseAuth in Frameworks */,
+				643BCA9229333D2F00B84834 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,10 +88,22 @@
 			children = (
 				642E71DF291DB34800322993 /* AppDelegate.swift */,
 				642E71E1291DB34800322993 /* SceneDelegate.swift */,
-				642E71E3291DB34800322993 /* ViewController.swift */,
+				647DFA26291DD8CD00F1F5CB /* AuthViewController.swift */,
+				642E71E3291DB34800322993 /* GamesViewController.swift */,
+				642E71F6291DB65C00322993 /* TicketsViewController.swift */,
+				647DFA1C291DCD3F00F1F5CB /* ItemViewController.swift */,
+				647DFA22291DD8A400F1F5CB /* LibraryViewController.swift */,
+				647DFA20291DD85F00F1F5CB /* ListingViewController.swift */,
+				647DFA24291DD8BD00F1F5CB /* SettingsViewController.swift */,
+				643BCA8829332EC300B84834 /* GameTableViewCell.swift */,
+				643BCA8A29332ED400B84834 /* TicketTableViewCell.swift */,
+				643BCA8C29332EE900B84834 /* LibraryTableViewCell.swift */,
+				6408FF602933CB6A001A7827 /* TicketClass.swift */,
+				6408FF622933CCC5001A7827 /* GameClass.swift */,
 				642E71E5291DB34900322993 /* Main.storyboard */,
 				642E71EB291DB34A00322993 /* Assets.xcassets */,
 				642E71ED291DB34A00322993 /* LaunchScreen.storyboard */,
+				0E102FF32936069400B4F28E /* GoogleService-Info.plist */,
 				642E71F0291DB34A00322993 /* Info.plist */,
 				642E71E8291DB34900322993 /* Arena.xcdatamodeld */,
 			);
@@ -86,6 +126,10 @@
 			dependencies = (
 			);
 			name = Arena;
+			packageProductDependencies = (
+				643BCA8F29333D2F00B84834 /* FirebaseAuth */,
+				643BCA9129333D2F00B84834 /* FirebaseFirestoreSwift */,
+			);
 			productName = Arena;
 			productReference = 642E71DC291DB34800322993 /* Arena.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +158,9 @@
 				Base,
 			);
 			mainGroup = 642E71D3291DB34800322993;
+			packageReferences = (
+				643BCA8E29333D2F00B84834 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 642E71DD291DB34800322993 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				642E71EF291DB34A00322993 /* LaunchScreen.storyboard in Resources */,
+				0E102FF42936069400B4F28E /* GoogleService-Info.plist in Resources */,
 				642E71EC291DB34A00322993 /* Assets.xcassets in Resources */,
 				642E71E7291DB34900322993 /* Main.storyboard in Resources */,
 			);
@@ -141,10 +189,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				642E71E4291DB34800322993 /* ViewController.swift in Sources */,
+				642E71F7291DB65C00322993 /* TicketsViewController.swift in Sources */,
+				642E71E4291DB34800322993 /* GamesViewController.swift in Sources */,
+				647DFA27291DD8CD00F1F5CB /* AuthViewController.swift in Sources */,
+				643BCA8B29332ED400B84834 /* TicketTableViewCell.swift in Sources */,
+				643BCA8D29332EE900B84834 /* LibraryTableViewCell.swift in Sources */,
+				6408FF612933CB6A001A7827 /* TicketClass.swift in Sources */,
+				647DFA23291DD8A400F1F5CB /* LibraryViewController.swift in Sources */,
 				642E71EA291DB34900322993 /* Arena.xcdatamodeld in Sources */,
 				642E71E0291DB34800322993 /* AppDelegate.swift in Sources */,
+				643BCA8929332EC300B84834 /* GameTableViewCell.swift in Sources */,
+				647DFA21291DD85F00F1F5CB /* ListingViewController.swift in Sources */,
 				642E71E2291DB34800322993 /* SceneDelegate.swift in Sources */,
+				6408FF632933CCC5001A7827 /* GameClass.swift in Sources */,
+				647DFA1D291DCD3F00F1F5CB /* ItemViewController.swift in Sources */,
+				647DFA25291DD8BD00F1F5CB /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,8 +350,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L2PF4MQV8R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Arena/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Request access to camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -303,7 +364,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = UTCS.Arena;
+				PRODUCT_BUNDLE_IDENTIFIER = yeungs.Arena;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -318,8 +379,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L2PF4MQV8R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Arena/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Request access to camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -330,7 +393,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = UTCS.Arena;
+				PRODUCT_BUNDLE_IDENTIFIER = yeungs.Arena;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -360,6 +423,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		643BCA8E29333D2F00B84834 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		643BCA8F29333D2F00B84834 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 643BCA8E29333D2F00B84834 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		643BCA9129333D2F00B84834 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 643BCA8E29333D2F00B84834 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		642E71E8291DB34900322993 /* Arena.xcdatamodeld */ = {
