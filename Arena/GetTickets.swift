@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 import FirebaseDatabase
 
-func getTickets() -> [Ticket] {
+func getTickets(completion: ([Ticket]) -> Void) {
     
     var ticketFound: [Ticket] = []
     
@@ -18,14 +18,20 @@ func getTickets() -> [Ticket] {
 
     // Retrieve the data at the "tickets" node once
     ticketsRef.observeSingleEvent(of: .value, with: { (snapshot) in
-        // Get the snapshot value as a dictionary
-        let ticketsDict = snapshot.value as! [String: Any]
+        // Check if the snapshot is nil
+        if snapshot.value == nil {
+            // If the snapshot is nil, return an empty array of Ticket objects
+            completion([])
+        } else {
+            // Get the snapshot value as a dictionary
+            let ticketsDict = snapshot.value as! [String: Any]
 
-        // Iterate over the dictionary and print each ticket
-        for (_, ticketData) in ticketsDict {
-            ticketFound.append(ticketData as! Ticket)
+            // Iterate over the dictionary and print each ticket
+            for (_, ticketData) in ticketsDict {
+                ticketFound.append(ticketData as! Ticket)
+            }
         }
+        // Return the array of Ticket objects using the completion parameter
+        completion(ticketFound)
     })
-    
-    return ticketFound
 }
