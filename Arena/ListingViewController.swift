@@ -82,7 +82,8 @@ class ListingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             let name = defaults.string(forKey: kUserFullNameID)
             let phoneNumber = defaults.string(forKey: kUserPhoneID)
             let ticket = Ticket(game: match, numberOfTickets: amount, price: asking, seller: name!, viewsCount: 0, sellerContact: phoneNumber!)
-            ticketsMasterlist.append(ticket)
+            putTicket(ticket: ticket)
+            ticketsMasterlist = getTickets()
             
             tableView.reloadData()
             dismiss(animated: true)
