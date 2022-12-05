@@ -83,7 +83,10 @@ class ListingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             let phoneNumber = defaults.string(forKey: kUserPhoneID)
             let ticket = Ticket(game: match, numberOfTickets: amount, price: asking, seller: name!, viewsCount: 0, sellerContact: phoneNumber!)
             putTicket(ticket: ticket)
-            ticketsMasterlist = getTickets()
+            getTickets(completion: { tickets in
+                // Update the ticketsMasterlist variable with the tickets array
+                ticketsMasterlist = tickets
+            })
             
             tableView.reloadData()
             dismiss(animated: true)

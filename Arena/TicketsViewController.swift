@@ -26,7 +26,11 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
         ticketsTableView.dataSource = self
         ticketsTableView.rowHeight = 75
         //update ticket list
-        ticketsMasterlist = getTickets()
+        getTickets(completion: { tickets in
+            // Update the ticketsMasterlist variable with the tickets array
+            ticketsMasterlist = tickets
+        })
+
         // Find the tickets for the specific college game
         for tickets in ticketsMasterlist {
             if tickets.game.team == game.team {

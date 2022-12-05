@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 import FirebaseDatabase
 
-func getTickets(completion: ([Ticket]) -> Void) {
+func getTickets(completion: @escaping ([Ticket]) -> Void) {
     
     var ticketFound: [Ticket] = []
     
@@ -23,12 +23,17 @@ func getTickets(completion: ([Ticket]) -> Void) {
             // If the snapshot is nil, return an empty array of Ticket objects
             completion([])
         } else {
-            // Get the snapshot value as a dictionary
-            let ticketsDict = snapshot.value as! [String: Any]
+            // Check if the snapshot value is nil
+            if snapshot.value == nil {
+              // If the snapshot value is nil, return early from the function
+              return
+            }
 
-            // Iterate over the dictionary and print each ticket
-            for (_, ticketData) in ticketsDict {
-                ticketFound.append(ticketData as! Ticket)
+            // Iterate over the tickets in the snapshot
+            for child in snapshot.children {
+                let ticketData = child as! DataSnapshot
+                let ticket = ticketData.value as! Ticket
+                ticketFound.append(ticket)
             }
         }
         // Return the array of Ticket objects using the completion parameter

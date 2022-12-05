@@ -46,7 +46,11 @@ class GamesViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 // In the main thread, dynamically change the remaining time text label
                 DispatchQueue.main.async {
                     self.gamesTableView.reloadData()
-                    ticketsMasterlist = getTickets()
+                    getTickets(completion: { tickets in
+                        // Update the ticketsMasterlist variable with the tickets array
+                        ticketsMasterlist = tickets
+                    })
+
                 }
             }
         }
