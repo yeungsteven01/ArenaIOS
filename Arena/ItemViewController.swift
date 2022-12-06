@@ -23,6 +23,10 @@ class ItemViewController: UIViewController {
     var delegate: TicketsViewController!
     var ticket: Ticket!
     
+    override func viewWillAppear(_ animated: Bool) {
+        view.backgroundColor = masterPride
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         gameImage.image = ticket.game.logo

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w7K-yD-JCA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w7K-yD-JCA">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -362,9 +362,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="g8L-Nb-vsG">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="g8L-Nb-vsG">
                                 <rect key="frame" x="64" y="490" width="263" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <imageReference key="minimumValueImage" image="dial.low" catalog="system" symbolScale="large"/>
+                                <color key="minimumTrackTintColor" red="0.74509803921568629" green="0.3529411764705882" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.74509803921568629" green="0.3529411764705882" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="prideSliderValueChanged:" destination="6AF-Mf-yWU" eventType="valueChanged" id="Z7Q-qW-qOy"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sound Effects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkS-R3-AdN">
                                 <rect key="frame" x="66" y="556" width="107" height="21"/>
@@ -446,6 +452,7 @@
                     <connections>
                         <outlet property="displayName" destination="Bq4-eW-S8S" id="FVj-4C-WH6"/>
                         <outlet property="phone" destination="PWb-Rw-PVN" id="LUL-F1-xeg"/>
+                        <outlet property="prideSlider" destination="g8L-Nb-vsG" id="7xO-xM-pwT"/>
                         <outlet property="profilePicImage" destination="umc-aK-f6a" id="IdZ-uP-b2I"/>
                         <outlet property="soundEffectSwitch" destination="aeq-qo-OfU" id="2Jo-yy-8VU"/>
                         <outlet property="stayLoggedInSwitch" destination="QQ3-XX-Gj9" id="1Eq-cH-G1X"/>
@@ -786,6 +793,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dial.low" catalog="system" width="128" height="109"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="profile pic" width="340" height="340"/>
         <namedColor name="AccentColor">

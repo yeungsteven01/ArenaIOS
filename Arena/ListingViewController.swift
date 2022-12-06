@@ -25,6 +25,10 @@ class ListingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     var delegate: LibraryViewController!
     var tableView: UITableView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        view.backgroundColor = masterPride
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         gamesPickerView.delegate = self

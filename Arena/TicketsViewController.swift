@@ -20,6 +20,10 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
     var game: Game!
     var gameTicketList: [Ticket] = []
     
+    override func viewWillAppear(_ animated: Bool) {
+        ticketsTableView.backgroundColor = masterPride
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         ticketsTableView.delegate = self
@@ -56,6 +60,10 @@ class TicketsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         ticketsTableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = .clear
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

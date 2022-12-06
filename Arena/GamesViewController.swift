@@ -20,6 +20,10 @@ class GamesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     let queue = DispatchQueue(label: "myQueue", qos: .userInteractive)
     let db = Firestore.firestore()
     
+    override func viewWillAppear(_ animated: Bool) {
+        gamesTableView.backgroundColor = masterPride
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         UNUserNotificationCenter.current().requestAuthorization(options:[.alert,.badge,.sound]) {
@@ -94,6 +98,10 @@ class GamesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         gamesTableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = .clear
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

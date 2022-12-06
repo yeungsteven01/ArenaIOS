@@ -28,7 +28,7 @@ class AuthViewController: UIViewController {
     let defaults = UserDefaults.standard
     
     var actionItem = "register"
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         

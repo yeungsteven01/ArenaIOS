@@ -20,6 +20,10 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     let kUserPhoneID = "phoneID"
     let defaults = UserDefaults.standard
     
+    override func viewWillAppear(_ animated: Bool) {
+        libraryTableView.backgroundColor = masterPride
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         libraryTableView.delegate = self
@@ -67,6 +71,10 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
             ticketsMasterlist.remove(at: row)
             libraryTableView.reloadData()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = .clear
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
