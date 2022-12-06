@@ -15,11 +15,55 @@ class Game {
     var dayTime: String
     
     init(game: String, date: String, dayTime: String) {
-        self.logo = UIImage(named: "\(game).png")!
+        if let logoImage = UIImage(named: "\(game).png") {
+                // Use the logo image if it is present in the project
+                self.logo = logoImage
+        } else {
+            // Use a default logo image if the team logo image is not present in the project
+            self.logo = UIImage(named: "default")!
+        }
         self.team = teams[game]!
         self.date = date
         self.dayTime = dayTime
     }
+    
+    func toDictionary() -> [String: Any] {
+        // Retrieve the key associated with the given value from the `teams` dictionary
+        let keys = teams.keys.filter({ teams[$0] == self.team })
+        let logoName: String
+
+        if let key = keys.first {
+            // The key associated with the given value is `key`
+            logoName = key
+        } else {
+            // No key-value pair in the dictionary has the given value, defult case
+            logoName = "ulm"
+        }
+
+        return [
+            "logo": logoName,
+            "team": logoName,
+            "date": self.date,
+            "dayTime": self.dayTime
+        ]
+    }
+
+    
+    static func fromDictionary(_ dictionary: [String: Any]) -> Game {
+        // Retrieve the logo name from the dictionary
+        let logoName = dictionary["logo"] as? String
+        
+        // Convert the logo name to an UIImage object
+        let logo = UIImage(named: "ulm.png")!
+
+        // Retrieve the other values from the dictionary
+        let team = dictionary["team"] as? String
+        let date = dictionary["date"] as? String
+        let dayTime = dictionary["dayTime"] as? String
+        
+        return Game(game: team ?? "", date: date ?? "", dayTime: dayTime ?? "")
+    }
+
 }
 
 let teams = ["ulm":           "ULM",
