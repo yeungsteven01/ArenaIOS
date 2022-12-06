@@ -88,10 +88,10 @@ class ListingViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             let ticket = Ticket(game: match, numberOfTickets: amount, price: asking, seller: name!, viewsCount: 0, sellerContact: phoneNumber!)
             putTicket(ticket: ticket)
             ticketsMasterlist.append(ticket)
-            //getTickets(completion: { tickets in
+            getTickets(completion: { tickets in
                 //Update the ticketsMasterlist variable with the tickets array
-                //ticketsMasterlist = tickets
-            //})
+                ticketsMasterlist = tickets
+            })
             
             tableView.reloadData()
             dismiss(animated: true)
