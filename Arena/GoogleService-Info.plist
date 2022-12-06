@@ -19,16 +19,18 @@
 	<key>STORAGE_BUCKET</key>
 	<string>arenav1-32c51.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:1059482628341:ios:0bd5bfb50789df5b2f95bc</string>
+	<key>DATABASE_URL</key>
+	<string>https://arenav1-32c51-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

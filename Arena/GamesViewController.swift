@@ -37,15 +37,16 @@ class GamesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         gamesTableView.delegate = self
         gamesTableView.dataSource = self
         gamesTableView.rowHeight = 100
+        //update data from server
+        getTickets(completion: { tickets in
+            // Update the ticketsMasterlist variable with the tickets array
+            ticketsMasterlist = tickets
+        })
         refresh()
     }
     
     // Refreshes the games table view every 5 seconds to stay updated
        func refresh() {
-        getTickets(completion: { tickets in
-            // Update the ticketsMasterlist variable with the tickets array
-            ticketsMasterlist = tickets
-        })
         queue.async {
             // While a sync while-loop to while the VC is up and the remaining time is above 0
             while true {
