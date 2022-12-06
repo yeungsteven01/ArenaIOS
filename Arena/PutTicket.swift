@@ -6,14 +6,13 @@
 //
 
 import Foundation
+import Firebase
 import FirebaseDatabase
 
 func putTicket(ticket: Ticket) {
-    
     // Get a reference to the "tickets" node in the Realtime Database
     let ticketsRef = Database.database().reference().child("tickets")
 
-    // Write the new ticket to the "tickets" node
-    ticketsRef.childByAutoId().setValue(ticket)
-    
+    // Convert the ticket to a dictionary and write it to the "tickets" node
+    ticketsRef.childByAutoId().setValue(ticket.toDictionary())
 }
